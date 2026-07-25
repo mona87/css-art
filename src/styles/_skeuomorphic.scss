@@ -1,0 +1,135 @@
+@use 'variables' as *;
+@use 'placeholders' as *;
+
+input {
+  @extend %pos;
+  display: none;
+  top: 0px;
+  z-index: 1;
+
+  &:checked ~ .luigi {
+    filter: drop-shadow(0px 0px 3px $bl);
+    .nose {
+      filter: drop-shadow(0 1px 2px $bl);
+      background: radial-gradient(
+        circle,
+        rgba(253, 231, 209, 1) 17%,
+        rgba(235, 181, 150, 1) 57%,
+        rgba(205, 126, 81, 1) 84%
+      );
+    }
+    .hat {
+      background: radial-gradient(
+        circle,
+        rgba(131, 210, 136, 1) 37%,
+        rgba(70, 138, 73, 1) 60%,
+        rgba(70, 138, 73, 1) 58%,
+        $dg 70%
+      );
+      &:before {
+        background: rgb(131, 210, 136);
+        background: radial-gradient(
+          circle,
+          rgba(131, 210, 136, 1) 37%,
+          #34b03b 53%,
+          $dg 79%,
+          rgba(131, 210, 136, 1) 90%
+        );
+      }
+      &:after {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 1) 40%,
+          rgba(228, 228, 228, 1) 100%
+        );
+        filter: drop-shadow(0px 0px 2px $g);
+      }
+    }
+    .brim {
+      box-shadow: 0 -20px 0px 0 $g, 0 -22px 1px 0px $dg;
+
+      &:after {
+        box-shadow: inset 0 9px 0px 0 $dg;
+        filter: drop-shadow(0 2px 3px $bl);
+        filter: drop-shadow(0 6px 3px rgba(162, 114, 90, 1));
+      }
+      &:before {
+        display: none;
+      }
+    }
+    .eyes {
+      filter: drop-shadow(0px -1px 1px $gr);
+      background: linear-gradient(
+        180deg,
+        rgba(87, 177, 212, 1) 34%,
+        rgba(46, 137, 172, 1) 69%,
+        rgba(39, 110, 138, 1) 96%
+      );
+    }
+    .mustache {
+      background: transparent;
+      box-shadow: 0px 5px 4px 0px #795c4d,
+        inset 0px -16px 4px 0px #170a08,
+        inset 0px -36px 5px 0px $m,
+        inset 0px -46px 0px 0px #170a08;
+    }
+    .ears {
+      background: rgb(244, 199, 175);
+      background: linear-gradient(
+        153deg,
+        rgba(244, 199, 175, 1) 18%,
+        rgba(222, 173, 148, 1) 34%,
+        rgba(207, 150, 119, 1) 58%
+      );
+      &:after {
+        background: $ie;
+        filter: drop-shadow(0 2px 2px $ie);
+      }
+    }
+    .eyebrows {
+      filter: drop-shadow(0px 1px 1px $bl);
+    }
+    .head {
+      background: rgb(219, 172, 147);
+      background: radial-gradient(
+        circle,
+        rgba(219, 172, 147, 1) 49%,
+        rgba(190, 148, 125, 1) 63%,
+        rgba(164, 118, 95, 1) 86%
+      );
+      &:after {
+        background: radial-gradient(
+          circle,
+          rgba(251, 238, 224, 1) 29%,
+          rgba(243, 203, 181, 1) 45%,
+          rgba(227, 163, 129, 1) 70%
+        );
+      }
+    }
+    .hair {
+      // background: rgb(164, 118, 95);
+      background-image: linear-gradient(
+        90deg,
+        $bl 20%,
+        rgba(41, 7, 0, 1) 30%,
+        rgba(41, 7, 0, 1) 70%,
+        $bl 85%
+      );
+      filter: drop-shadow(4px 6px 4px rgba(162, 114, 90, 1));
+
+      &:after {
+        background: linear-gradient(
+          90deg,
+          rgba(162, 114, 90, 1) 20%,
+          rgba(232, 187, 163, 1) 53%
+        );
+      }
+    }
+    .letter {
+    }
+    .hair-bottom {
+      filter: drop-shadow(0px 2px 0px $bl);
+    }
+  }
+}

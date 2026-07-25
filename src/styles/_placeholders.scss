@@ -1,0 +1,20 @@
+%pos,
+%pos *,
+%pos*:after,
+%pos*:before,
+%pos:after,
+%pos:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+}
+
+%text {
+  @extend %pos;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-family: 'Comfortaa', cursive;
+}
