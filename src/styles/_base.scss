@@ -11,6 +11,14 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+
+  // Skeuomorphic mode: swap the flat fill for a radial gradient
+  &:has(input:checked) {
+    background: radial-gradient(circle at center,
+        #5a7cb0 0%,
+        $nb 55%,
+        #223a5e 100%);
+  }
 }
 
 .title {

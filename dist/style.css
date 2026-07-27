@@ -73,6 +73,9 @@ body {
   justify-content: center;
   position: relative;
 }
+body:has(input:checked) {
+  background: radial-gradient(circle at center, #5a7cb0 0%, #3a5889 55%, #223a5e 100%);
+}
 
 .title {
   top: 5%;
